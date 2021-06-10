@@ -44,7 +44,7 @@ recognition.onresult = function(e) {
 
 function writeMessageOnInput() {
 
-  let typingSound = document.getElementById('typing-sound');
+ // let typingSound = document.getElementById('typing-sound');
 
   if (sendBtn.innerText == 'mic') {
 
@@ -166,7 +166,7 @@ function writeBotMsg(arg) {
 
   botDataBox.innerHTML = `
 
-  <img src='Assets/Images/neko.png' class='msg-pfp'>
+  <img src='neko.png' class='msg-pfp'>
 
   <div class='msg-bot-name'><strong>Aalsa</strong></div>
 
