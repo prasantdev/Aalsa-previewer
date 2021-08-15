@@ -189,7 +189,7 @@ recognition.onnomatch = function(e) {
 
 //toggle send btn and mic
 
-msgInput.addEventListener('input', () => {
+msgInput.addEventListener('keyup', () => {
 
   if (msgInput.value.trim('') != '') {
 
