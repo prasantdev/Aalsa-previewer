@@ -202,6 +202,19 @@ msgInput.addEventListener('keyup', () => {
   }
 
 });
+msgInput.addEventListener('input', () => {
+
+  if (msgInput.value.trim('') != '') {
+
+    sendBtn.children[0].innerText = 'send';
+
+  } else {
+
+    sendBtn.children[0].innerText = 'mic';
+
+  }
+
+});
 
 const menu = document.querySelector(".contextmenu");
 
