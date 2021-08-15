@@ -44,7 +44,7 @@ recognition.onresult = function (e) {
 
 function writeMessageOnInput() {
 
-  let typingSound = document.getElementById('typing-sound');
+  // let typingSound = document.getElementById('typing-sound');
 
   if (sendBtn.innerText == 'mic') {
 
@@ -320,6 +320,15 @@ window.addEventListener('load', () => {
   // startRecognition();
 
   sendBtn.addEventListener('click', writeMessageOnInput);
+  window.addEventListener('keydown', (e) => {
+  //  console.log(e);
+  if(e.key === 'Enter') {
+    if(e.shiftKey === false){
+      // e.preventDefault();
+      writeMessageOnInput();
+    }
+  }
+  });
 
 });
 
