@@ -371,4 +371,9 @@ html {
   background: rgba(0, 0, 0, 0.12);
 
 }
-
+.dark-mode{
+  color: white;
+}
+.fas, .fa{
+  font-size: 2rem;
+}
