@@ -206,11 +206,11 @@ msgInput.addEventListener('input', () => {
 
   if (msgInput.value.trim('') != '') {
 
-    alert('Send  Button should appear in the message box.');
+    // alert('Send  Button should appear in the message box.');
     sendBtn.children[0].innerText = 'send';
 
   } else {
-    alert('mic  Button should appear in the message box.');
+    // alert('mic  Button should appear in the message box.');
     sendBtn.children[0].innerText = 'mic';
 
   }
