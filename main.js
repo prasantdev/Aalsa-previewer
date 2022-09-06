@@ -108,6 +108,9 @@ function getBotMsg(userMsg) {
   //  let url = `https://api.udit.gq/api/chatbot?message=${userMsg}[&name=Supra&user=MESSAGE_AUTHOR_ID&gender=Female]`;
 
   userMsg = userMsg.replace(/\s/ig, '+');
+  
+  let uid = Math.random().toString().replace('.','');
+  let url = `http://api.brainshop.ai/get?bid=169043&key=faK9uaF79Ec7RedQ&uid=${uid}&msg=${userMsg}`
 
   let url = `https://cors-fetch-it.herokuapp.com/https://api.udit.gq/api/chatbot?message=${userMsg}&name=Aalsa&user=MESSAGE_AUTHOR_ID&gender=female`;
 
@@ -119,9 +122,9 @@ function getBotMsg(userMsg) {
 
   }).then((data) => {
 
-    writeBotMsg(data.message);
+    writeBotMsg(data.cnt);
 
-    // //console.log(data.message);
+    // //console.log(data.cnt);
 
     return;
 
