@@ -109,7 +109,7 @@ function getBotMsg(userMsg) {
 
   userMsg = userMsg.replace(/\s/ig, '+');
   
-  const uid = localStorage.getItem('uid');
+  let uid = localStorage.getItem('uid');
   
   if(!uid){
     uid = Math.random().toString().replace('.','');
