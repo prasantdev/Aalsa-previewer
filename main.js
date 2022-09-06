@@ -109,10 +109,16 @@ function getBotMsg(userMsg) {
 
   userMsg = userMsg.replace(/\s/ig, '+');
   
-  let uid = Math.random().toString().replace('.','');
+  const uid = localStorage.getItem('uid');
+  
+  if(!uid){
+    uid = Math.random().toString().replace('.','');
+    localStorage.setItem('uid', uid);
+  }
+  
   let url = `http://api.brainshop.ai/get?bid=169043&key=faK9uaF79Ec7RedQ&uid=${uid}&msg=${userMsg}`
 
-  let url = `https://cors-fetch-it.herokuapp.com/https://api.udit.gq/api/chatbot?message=${userMsg}&name=Aalsa&user=MESSAGE_AUTHOR_ID&gender=female`;
+ // let url = `https://cors-fetch-it.herokuapp.com/https://api.udit.gq/api/chatbot?message=${userMsg}&name=Aalsa&user=MESSAGE_AUTHOR_ID&gender=female`;
 
   // let url = `https://mathe.sololearn.repl.co/${userMsg}`;
 
