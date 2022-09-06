@@ -122,7 +122,11 @@ function getBotMsg(userMsg) {
 
   // let url = `https://mathe.sololearn.repl.co/${userMsg}`;
 
-  fetch(url).then((response) => {
+  fetch(url, {
+     headers: {
+            "Content-Type": "application/json"
+        },
+  }).then((response) => {
 
     return response.json();
 
